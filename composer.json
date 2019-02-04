@@ -1,0 +1,29 @@
+{
+    "name": "owenconti/remoteauth-laravel-sdk",
+    "description": "Laravel SDK for RemoteAuth.",
+    "type": "library",
+    "require": {
+        "illuminate/support": "^5.7",
+        "guzzlehttp/guzzle": "^6.3@dev"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Owen Conti",
+            "email": "owen@ohseemedia.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "RemoteAuth\\RemoteAuthServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "RemoteAuth\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
