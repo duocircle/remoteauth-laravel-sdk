@@ -31,16 +31,34 @@ class HttpClient
         $this->client = new Client();
     }
 
+    /**
+     * Performs a synchronous GET request to the given URL.
+     *
+     * Returns the response
+     *
+     * @param string $url
+     * @return array
+     */
     public function get(string $url)
     {
         return $this->request('GET', $url);
     }
 
+    /**
+     * Makes a HTTP request.
+     *
+     * Adds Authentication header for authenticating the user.
+     *
+     * @param string $method
+     * @param string $url
+     * @param array $payload
+     * @return array
+     */
     private function request(string $method, string $url, ?array $payload = [])
     {
         $options = [
             'headers' => [
-                'Authentication' => 'Bearer ' . $this->accessToken
+                'Authentication' => "Bearer $this->accessToken"
             ]
         ];
 

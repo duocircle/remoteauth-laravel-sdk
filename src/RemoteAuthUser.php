@@ -2,7 +2,7 @@
 
 namespace RemoteAuth;
 
-use Illuminate\Support\Carbon;
+use Carbon\Carbon;
 
 interface RemoteAuthUser
 {
