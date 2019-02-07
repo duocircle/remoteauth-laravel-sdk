@@ -3,15 +3,39 @@
 namespace RemoteAuth;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Contracts\Container\Container;
+use RemoteAuthPhp\Client;
 
 class RemoteAuthServiceProvider extends ServiceProvider
 {
+
     /**
-     * All of the container singletons that should be registered.
+     * Register bindings in the container.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        $this->app->singleton('RemoteAuthPhp\Client', function(Container $app) {
+            $config = $app['config'];
+
+            return new Client([
+                'baseUrl' => $config['services']['remoteauth']['url'],
+                'clientId' => $config['services']['remoteauth']['client_id'],
+                'clientSecret' => $config['services']['remoteauth']['client_secret'],
+                'scope' => $config['services']['remoteauth']['scopes'],
+            ]);
+        });
+    }
+
+    /**
+     * The event listener mappings for the application.
      *
      * @var array
      */
-    public $singletons = [
-        RemoteAuthSDK::class => RemoteAuthSDK::class,
+    protected $listen = [
+        \SocialiteProviders\Manager\SocialiteWasCalled::class => [
+            '\SocialiteProviders\RemoteAuth\RemoteAuthExtendSocialite@handle'
+        ]
     ];
 }
