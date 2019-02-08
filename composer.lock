@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "12b431f5e1bef32679715feeea169ede",
+    "content-hash": "4f894c208d926f8c53af714c7526d7a9",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -361,12 +361,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/http.git",
-                "reference": "c7ef1ffda62dfff523a2773dae201d331fe5bacd"
+                "reference": "79d131bb61dfc453d09de7a4a8693832632dab07"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/http/zipball/c7ef1ffda62dfff523a2773dae201d331fe5bacd",
-                "reference": "c7ef1ffda62dfff523a2773dae201d331fe5bacd",
+                "url": "https://api.github.com/repos/illuminate/http/zipball/79d131bb61dfc453d09de7a4a8693832632dab07",
+                "reference": "79d131bb61dfc453d09de7a4a8693832632dab07",
                 "shasum": ""
             },
             "require": {
@@ -400,7 +400,7 @@
             ],
             "description": "The Illuminate Http package.",
             "homepage": "https://laravel.com",
-            "time": "2019-01-18T20:26:05+00:00"
+            "time": "2019-02-07T13:50:39+00:00"
         },
         {
             "name": "illuminate/session",
@@ -459,12 +459,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "49110cc355532fb5f421ab996bb67669f35dc9ab"
+                "reference": "4a14c4e6bbcc2cf02c20aa99e037625dc98919c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/49110cc355532fb5f421ab996bb67669f35dc9ab",
-                "reference": "49110cc355532fb5f421ab996bb67669f35dc9ab",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/4a14c4e6bbcc2cf02c20aa99e037625dc98919c4",
+                "reference": "4a14c4e6bbcc2cf02c20aa99e037625dc98919c4",
                 "shasum": ""
             },
             "require": {
@@ -511,7 +511,7 @@
             ],
             "description": "The Illuminate Support package.",
             "homepage": "https://laravel.com",
-            "time": "2019-01-24T14:49:36+00:00"
+            "time": "2019-02-07T13:51:27+00:00"
         },
         {
             "name": "laravel/socialite",
@@ -701,12 +701,17 @@
         },
         {
             "name": "owenconti/remoteauth-php-sdk",
-            "version": "dev-master",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/owenconti/remoteauth-php-sdk.git",
+                "reference": "5755a7098f6ad5074a153166ea96a3a5e54962ef"
+            },
             "dist": {
-                "type": "path",
-                "url": "../remoteauth-php-sdk",
-                "reference": "7728fca805b97c6a3ccb853e3a649f5aa61a763f",
-                "shasum": null
+                "type": "zip",
+                "url": "https://api.github.com/repos/owenconti/remoteauth-php-sdk/zipball/5755a7098f6ad5074a153166ea96a3a5e54962ef",
+                "reference": "5755a7098f6ad5074a153166ea96a3a5e54962ef",
+                "shasum": ""
             },
             "require": {
                 "guzzlehttp/guzzle": "6.3"
@@ -717,6 +722,7 @@
                     "RemoteAuthPhp\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -726,7 +732,8 @@
                     "email": "owen@ohseemedia.com"
                 }
             ],
-            "description": "PHP SDK for RemoteAuth."
+            "description": "PHP SDK for RemoteAuth.",
+            "time": "2019-02-08T00:14:12+00:00"
         },
         {
             "name": "owenconti/remoteauth-socialite-provider",
@@ -1125,12 +1132,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "c7ac313d923b8a0b8a354bef11b9c50624edb97b"
+                "reference": "8f517eb954fd24d5c13e81eab8452abe3f697391"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/c7ac313d923b8a0b8a354bef11b9c50624edb97b",
-                "reference": "c7ac313d923b8a0b8a354bef11b9c50624edb97b",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/8f517eb954fd24d5c13e81eab8452abe3f697391",
+                "reference": "8f517eb954fd24d5c13e81eab8452abe3f697391",
                 "shasum": ""
             },
             "require": {
@@ -1173,7 +1180,7 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2019-01-27T10:31:13+00:00"
+            "time": "2019-02-07T09:41:41+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -1611,12 +1618,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "9c3548bf55c71d70b569c4055c7c3bb91b897a18"
+                "reference": "1155caa45b23f89f140a14af08e934a71a60f7e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/9c3548bf55c71d70b569c4055c7c3bb91b897a18",
-                "reference": "9c3548bf55c71d70b569c4055c7c3bb91b897a18",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/1155caa45b23f89f140a14af08e934a71a60f7e8",
+                "reference": "1155caa45b23f89f140a14af08e934a71a60f7e8",
                 "shasum": ""
             },
             "require": {
@@ -1676,15 +1683,13 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
-            "time": "2019-01-29T09:50:57+00:00"
+            "time": "2019-02-07T18:43:24+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "owenconti/remoteauth-php-sdk": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
