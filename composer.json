@@ -6,7 +6,7 @@
         "illuminate/contracts": "^5.7",
         "illuminate/support": "^5.7",
         "laravel/socialite": "^4.0",
-        "owenconti/remoteauth-php-sdk": "^2.0",
+        "owenconti/remoteauth-php-sdk": "^3.0",
         "owenconti/remoteauth-socialite-provider": "^1.0"
     },
     "license": "MIT",

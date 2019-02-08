@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4f894c208d926f8c53af714c7526d7a9",
+    "content-hash": "368789901991b6f964d3466178c6dcfd",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -701,16 +701,16 @@
         },
         {
             "name": "owenconti/remoteauth-php-sdk",
-            "version": "2.0.0",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/owenconti/remoteauth-php-sdk.git",
-                "reference": "5755a7098f6ad5074a153166ea96a3a5e54962ef"
+                "reference": "8d9a95c6a2ce9f82f5a9ba20b30d12da0d31061d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/owenconti/remoteauth-php-sdk/zipball/5755a7098f6ad5074a153166ea96a3a5e54962ef",
-                "reference": "5755a7098f6ad5074a153166ea96a3a5e54962ef",
+                "url": "https://api.github.com/repos/owenconti/remoteauth-php-sdk/zipball/8d9a95c6a2ce9f82f5a9ba20b30d12da0d31061d",
+                "reference": "8d9a95c6a2ce9f82f5a9ba20b30d12da0d31061d",
                 "shasum": ""
             },
             "require": {
@@ -733,7 +733,7 @@
                 }
             ],
             "description": "PHP SDK for RemoteAuth.",
-            "time": "2019-02-08T00:14:12+00:00"
+            "time": "2019-02-08T05:40:24+00:00"
         },
         {
             "name": "owenconti/remoteauth-socialite-provider",

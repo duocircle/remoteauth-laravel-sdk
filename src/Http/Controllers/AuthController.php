@@ -17,7 +17,9 @@ class AuthController
      */
     public function login()
     {
-        return Socialite::driver('remoteauth')->redirect();
+        return Socialite::driver('remoteauth')
+            ->scopes(config('services.remoteauth.scopes'))
+            ->redirect();
     }
 
     /**
