@@ -70,7 +70,9 @@ class User extends Authenticatable implements RemoteAuthUser
 
 ### Service Provider Registration
 
-The RemoteAuth Laravel SDK comes with a standard setup to quickly get you up and running. Inside `AppServiceProvider.php`, register your `User` model and register the routes used for the OAuth flow:
+The RemoteAuth Laravel SDK comes with a standard setup to quickly get you up and running. It will handle the entire OAuth workflow for you, granted you have a standard workflow.
+
+Inside `AppServiceProvider.php`, register your `User` model and register the routes used for the OAuth flow:
 
 ```php
 // AppServiceProvider.php
