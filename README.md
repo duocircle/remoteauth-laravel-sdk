@@ -2,6 +2,8 @@
 
 You can use this package to quickly get up and running with [RemoteAuth](https://remoteauth.com).
 
+The RemoteAuth Laravel SDK uses the RemoteAuth PHP SDK behind the scenes.
+
 ## Setup
 
 ### Configuration
@@ -24,37 +26,90 @@ You need to add the following configuration values to `config/services.php`:
 * `redirect` - This is the endpoint of your application that RemoteAuth will respond to during the OAuth workflow.
 * `scopes` - The scopes that should be requested when granting an access token.
 
-### Routes
+### User
 
-You need to setup two routes for use with the OAuth workflow.
+Your `users` table should be updated to include columns for `access_token`, `refresh_token` and `expires_at`.
 
-First route is to redirect your application to RemoteAuth, using Socialite:
+Your `User` model must implement the [`RemoteAuthUser`](https://github.com/owenconti/remoteauth-php-sdk/blob/master/src/RemoteAuthUser.php) interface provided by `remoteauth-php-sdk`.
 
-```
-GET: /login/remoteauth
+Here's a standard example of the overridden methods:
 
-public function login()
+```php
+class User extends Authenticatable implements RemoteAuthUser
 {
-    return Socialite::driver('remoteauth')->redirect();
+
+    // ... standard user model stuff here
+    
+    /** @Override */
+    public function accessToken(): string
+    {
+        return $this->access_token;
+    }
+
+    /** @Override */
+    public function refreshToken(): string
+    {
+        return $this->refresh_token;
+    }
+
+    /** @Override */
+    public function accessTokenExpiration(): \DateTime
+    {
+        return $this->expires_at;
+    }
+
+    public function handleTokenRefresh(string $accessToken, string $refreshToken, int $expiresIn): void
+    {
+        $this->access_token = $accessToken;
+        $this->refresh_token = $refreshToken;
+        $this->expires_at = Carbon::now()->addSeconds($expiresIn);
+        $this->save();
+    }
 }
 ```
 
-The second route is to handle the callback from RemoteAuth. This route's endpoint needs to match the `redirect` configuration value set above.
+### Service Provider Registration
 
-```
-GET: /login/remoteauth/callback
+The Laravel SDK comes with a standard setup to quickly get you up and running. Inside `AppServiceProvider.php`, register your `User` model and register the routes used for the OAuth flow:
 
-public function callback(Request $request)
+```php
+// AppServiceProvider.php
+
+/**
+ * Bootstrap any application services.
+ *
+ * @return void
+ */
+public function boot()
 {
-    $userDetails = Socialite::driver('remoteauth')->user();
-
-    // Store user details in your database
-    // Login the user in
-    // Continue with your auth flow
+    RemoteAuth::setUserModel(\App\User::class);
+    RemoteAuth::registerRoutes();
 }
 ```
 
-`$userDetails` contains information about the authenticated user:
+The `RemoteAuth::registerRoutes()` method can optionally accept a closure argument. If passed, this closure will be called when the OAuth workflow is successful.
+
+The closure is passed an arugment, `$userDetails`. This argument is the user object returned from Socialite:
+
+```php
+RemoteAuth::registerRoutes(function(User $userDetails) {
+    $user = \App\User::firstOrNew([
+        'email' => $userDetails->email,
+    ], [
+        'name' => $userDetails->name,
+    ]);
+
+    $user->handleTokenRefresh($userDetails->token, $userDetails->refreshToken, $userDetails->expiresIn);
+
+    Auth::login($user);
+
+    return redirect('/');
+});
+```
+
+If you do not pass the closure, the default closure will update (or create if new) the User identified by their email address. It will then call the `handleTokenRefresh()` method on your `User` class, and then login the user in.
+
+`$userDetails` passed into the closure contains the following properties:
 
 * id
 * name
@@ -62,6 +117,3 @@ public function callback(Request $request)
 * token
 * refreshToken
 * expiresIn
-
-You should store this information in your `users` table.
-
