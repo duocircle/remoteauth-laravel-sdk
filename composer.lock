@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "368789901991b6f964d3466178c6dcfd",
+    "content-hash": "12b431f5e1bef32679715feeea169ede",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -701,20 +701,16 @@
         },
         {
             "name": "owenconti/remoteauth-php-sdk",
-            "version": "3.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/owenconti/remoteauth-php-sdk.git",
-                "reference": "8d9a95c6a2ce9f82f5a9ba20b30d12da0d31061d"
-            },
+            "version": "dev-master",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/owenconti/remoteauth-php-sdk/zipball/8d9a95c6a2ce9f82f5a9ba20b30d12da0d31061d",
-                "reference": "8d9a95c6a2ce9f82f5a9ba20b30d12da0d31061d",
-                "shasum": ""
+                "type": "path",
+                "url": "../remoteauth-php-sdk",
+                "reference": "2b2e324c89e7afcdf11a8ad4905086aa6a0cae6d",
+                "shasum": null
             },
             "require": {
-                "guzzlehttp/guzzle": "6.3"
+                "guzzlehttp/guzzle": "6.3",
+                "psr/simple-cache": "^1.0@dev"
             },
             "type": "library",
             "autoload": {
@@ -722,7 +718,6 @@
                     "RemoteAuthPhp\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -732,8 +727,7 @@
                     "email": "owen@ohseemedia.com"
                 }
             ],
-            "description": "PHP SDK for RemoteAuth.",
-            "time": "2019-02-08T05:40:24+00:00"
+            "description": "PHP SDK for RemoteAuth."
         },
         {
             "name": "owenconti/remoteauth-socialite-provider",
@@ -1356,12 +1350,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-kernel.git",
-                "reference": "d7c74c617834c69b5150259c00e8ab0f5f04027a"
+                "reference": "d341dfdeddff63bdcf7b35c89d3001eeabb4cfac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/d7c74c617834c69b5150259c00e8ab0f5f04027a",
-                "reference": "d7c74c617834c69b5150259c00e8ab0f5f04027a",
+                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/d341dfdeddff63bdcf7b35c89d3001eeabb4cfac",
+                "reference": "d341dfdeddff63bdcf7b35c89d3001eeabb4cfac",
                 "shasum": ""
             },
             "require": {
@@ -1437,7 +1431,7 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "https://symfony.com",
-            "time": "2019-01-30T11:44:59+00:00"
+            "time": "2019-02-08T13:07:06+00:00"
         },
         {
             "name": "symfony/mime",
@@ -1689,7 +1683,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "owenconti/remoteauth-php-sdk": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

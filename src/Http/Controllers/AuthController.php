@@ -12,7 +12,7 @@ class AuthController
 {
     /**
      * Redirects to RemoteAuth to start the authentication flow.
-     * 
+     *
      * @return Redirect
      */
     public function login()
@@ -24,26 +24,27 @@ class AuthController
 
     /**
      * Handle the callback from RemoteAuth during the authentication flow.
-     * 
+     *
      * @param Request $request
      */
     public function callback(Request $request)
     {
         $userDetails = Socialite::driver('remoteauth')->user();
 
-        $handler = RemoteAuth::handler() ?: function(User $userDetails) {
+        $handler = RemoteAuth::handler() ?: function (User $userDetails) {
             $userModel = RemoteAuth::userModel();
 
             if (!$userModel) {
                 throw new \Exception('Missing $userModel on RemoteAuth class');
             }
-    
+
             $user = $userModel::firstOrNew([
                 'email' => $userDetails->email,
             ], [
-                'name' => $userDetails->name,
+                'name'               => $userDetails->name
             ]);
-    
+            
+            $user->remoteauth_user_id = $userDetails->id;
             $user->handleTokenRefresh($userDetails->token, $userDetails->refreshToken, $userDetails->expiresIn);
 
             Auth::login($user);
