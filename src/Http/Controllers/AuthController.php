@@ -44,8 +44,7 @@ class AuthController
                 'name'               => $userDetails->name
             ]);
             
-            $user->remoteauth_user_id = $userDetails->id;
-            $user->handleTokenRefresh($userDetails->token, $userDetails->refreshToken, $userDetails->expiresIn);
+            $user->handleTokenRefresh($userDetails->id, $userDetails->token, $userDetails->refreshToken, $userDetails->expiresIn);
 
             Auth::login($user);
 
