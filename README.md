@@ -4,6 +4,15 @@ You can use this package to quickly get up and running with [RemoteAuth](https:/
 
 The RemoteAuth Laravel SDK uses the RemoteAuth PHP SDK behind the scenes.
 
+## Overview
+
+This package sets up the following for you:
+
+* OAuth authentication workflow via [Socialite](https://laravel.com/docs/5.7/socialite)
+* Configures the [RemoteAuth PHP SDK](https://github.com/owenconti/remoteauth-php-sdk)
+* Uses Laravel's cache for request result caching
+* Handles refreshing access tokens when they expire
+
 ## Setup
 
 ### Configuration
@@ -130,3 +139,8 @@ If you do not pass the closure, the default closure will update (or create if ne
 * token
 * refreshToken
 * expiresIn
+
+`RemoteAuth::registerRoutes()` registers two routes for you:
+
+* `/login/remoteauth` - You need to redirect your users to this endpoint when starting the login flow.
+* `/login/remoteauth/callback` - This endpoint is called by RemoteAuth when the user has authenticated with RemoteAuth.

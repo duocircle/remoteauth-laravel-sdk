@@ -14,7 +14,7 @@ class RemoteAuth
 
     /**
      * Registers the authentication routes for RemtoeAuth.
-     * 
+     *
      * @return void
      */
     public static function registerRoutes(?\Closure $handler = null)
@@ -39,7 +39,7 @@ class RemoteAuth
 
     /**
      * Sets the model to use for users.
-     * 
+     *
      * @param string $userModel
      * @return void
      */
@@ -50,7 +50,7 @@ class RemoteAuth
 
     /**
      * Returns the model to use for users.
-     * 
+     *
      * @return string
      */
     public static function userModel()
@@ -60,7 +60,7 @@ class RemoteAuth
 
     /**
      * Returns the handler used during oauth flow.
-     * 
+     *
      * @return \Closure
      */
     public static function handler()
