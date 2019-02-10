@@ -31,7 +31,7 @@ You need to add the following configuration values to `config/services.php`:
 There's a configuration variable available for declaring which of your models represents a RemoteAuth User.
 
 ```php
-RemoteAuth::setUserModel(\App\User.php);
+RemoteAuth::setUserModel(\App\User::class);
 ```
 
 Your `User` model must implement the [`RemoteAuthUser`](https://github.com/owenconti/remoteauth-php-sdk/blob/master/src/RemoteAuthUser.php) interface provided by `remoteauth-php-sdk`.
