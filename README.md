@@ -28,7 +28,11 @@ You need to add the following configuration values to `config/services.php`:
 
 ### User
 
-Your `users` table should be updated to include columns for `access_token`, `refresh_token` and `expires_at`.
+There's a configuration variable available for declaring which of your models represents a RemoteAuth User.
+
+```php
+RemoteAuth::setUserModel(\App\User.php);
+```
 
 Your `User` model must implement the [`RemoteAuthUser`](https://github.com/owenconti/remoteauth-php-sdk/blob/master/src/RemoteAuthUser.php) interface provided by `remoteauth-php-sdk`.
 
@@ -39,6 +43,12 @@ class User extends Authenticatable implements RemoteAuthUser
 {
 
     // ... standard user model stuff here
+    
+    /** @Override */
+    public function remoteAuthUserId(): string
+    {
+        return $this->remoteauth_user_id;
+    }
     
     /** @Override */
     public function accessToken(): string
@@ -58,8 +68,9 @@ class User extends Authenticatable implements RemoteAuthUser
         return $this->expires_at;
     }
 
-    public function handleTokenRefresh(string $accessToken, string $refreshToken, int $expiresIn): void
+    public function handleTokenRefresh(string $userId, string $accessToken, string $refreshToken, int $expiresIn): void
     {
+        $this->remoteauth_user_id = $userId;
         $this->access_token = $accessToken;
         $this->refresh_token = $refreshToken;
         $this->expires_at = Carbon::now()->addSeconds($expiresIn);
@@ -101,7 +112,7 @@ RemoteAuth::registerRoutes(function(User $userDetails) {
         'name' => $userDetails->name,
     ]);
 
-    $user->handleTokenRefresh($userDetails->token, $userDetails->refreshToken, $userDetails->expiresIn);
+    $user->handleTokenRefresh($userDetails->id, $userDetails->token, $userDetails->refreshToken, $userDetails->expiresIn);
 
     Auth::login($user);
 
