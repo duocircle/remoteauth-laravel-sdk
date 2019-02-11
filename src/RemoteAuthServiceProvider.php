@@ -2,13 +2,13 @@
 
 namespace RemoteAuth;
 
-use Illuminate\Support\ServiceProvider;
 use Illuminate\Contracts\Container\Container;
 use RemoteAuthPhp\Client;
 use Illuminate\Support\Facades\Cache;
 use Psr\SimpleCache\CacheInterface;
+use Illuminate\Foundation\Support\Providers\EventServiceProvider;
 
-class RemoteAuthServiceProvider extends ServiceProvider
+class RemoteAuthServiceProvider extends EventServiceProvider
 {
     /**
      * Register bindings in the container.
