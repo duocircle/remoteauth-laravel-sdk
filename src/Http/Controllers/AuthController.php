@@ -41,7 +41,7 @@ class AuthController
             $user = $userModel::firstOrNew([
                 'email' => $userDetails->email,
             ], [
-                'name'               => $userDetails->name
+                'name' => $userDetails->name
             ]);
             
             $user->handleTokenRefresh($userDetails->id, $userDetails->token, $userDetails->refreshToken, $userDetails->expiresIn);
