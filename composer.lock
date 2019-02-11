@@ -739,16 +739,16 @@
         },
         {
             "name": "owenconti/remoteauth-socialite-provider",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/owenconti/remoteauth-socialite-provider.git",
-                "reference": "e9530735f5b7a626e793132440c724a4875f6b72"
+                "reference": "078b93db8094426d792fa4cb7119a38e419085d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/owenconti/remoteauth-socialite-provider/zipball/e9530735f5b7a626e793132440c724a4875f6b72",
-                "reference": "e9530735f5b7a626e793132440c724a4875f6b72",
+                "url": "https://api.github.com/repos/owenconti/remoteauth-socialite-provider/zipball/078b93db8094426d792fa4cb7119a38e419085d0",
+                "reference": "078b93db8094426d792fa4cb7119a38e419085d0",
                 "shasum": ""
             },
             "require": {
@@ -772,7 +772,7 @@
                 }
             ],
             "description": "RemoteAuth OAuth2 Provider for Laravel Socialite",
-            "time": "2018-12-22T19:05:48+00:00"
+            "time": "2019-02-11T05:52:29+00:00"
         },
         {
             "name": "psr/container",
