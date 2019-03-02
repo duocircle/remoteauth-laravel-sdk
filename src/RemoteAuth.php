@@ -13,7 +13,7 @@ class RemoteAuth
     private static $userModel;
 
     /**
-     * Registers the authentication routes for RemtoeAuth.
+     * Registers the authentication routes for RemoteAuth.
      *
      * @return void
      */
