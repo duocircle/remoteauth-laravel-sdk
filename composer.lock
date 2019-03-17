@@ -313,7 +313,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v5.8.2",
+            "version": "v5.8.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -357,7 +357,7 @@
         },
         {
             "name": "illuminate/filesystem",
-            "version": "v5.8.2",
+            "version": "v5.8.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/filesystem.git",
@@ -409,7 +409,7 @@
         },
         {
             "name": "illuminate/http",
-            "version": "v5.8.2",
+            "version": "v5.8.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/http.git",
@@ -456,16 +456,16 @@
         },
         {
             "name": "illuminate/session",
-            "version": "v5.8.2",
+            "version": "v5.8.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/session.git",
-                "reference": "15b4d36cb3f1c6c757a81e9acc593b98acb905ab"
+                "reference": "f23679d3cca8dbd05f987099eb0e8aad9f836508"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/session/zipball/15b4d36cb3f1c6c757a81e9acc593b98acb905ab",
-                "reference": "15b4d36cb3f1c6c757a81e9acc593b98acb905ab",
+                "url": "https://api.github.com/repos/illuminate/session/zipball/f23679d3cca8dbd05f987099eb0e8aad9f836508",
+                "reference": "f23679d3cca8dbd05f987099eb0e8aad9f836508",
                 "shasum": ""
             },
             "require": {
@@ -503,20 +503,20 @@
             ],
             "description": "The Illuminate Session package.",
             "homepage": "https://laravel.com",
-            "time": "2019-02-18T18:37:54+00:00"
+            "time": "2019-03-05T13:33:49+00:00"
         },
         {
             "name": "illuminate/support",
-            "version": "v5.8.2",
+            "version": "v5.8.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "013cfab5d44c530b56d70cc9ccb891c8b25ebbce"
+                "reference": "07062f5750872a31e086ff37a7c50ac18b8c417c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/013cfab5d44c530b56d70cc9ccb891c8b25ebbce",
-                "reference": "013cfab5d44c530b56d70cc9ccb891c8b25ebbce",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/07062f5750872a31e086ff37a7c50ac18b8c417c",
+                "reference": "07062f5750872a31e086ff37a7c50ac18b8c417c",
                 "shasum": ""
             },
             "require": {
@@ -564,20 +564,20 @@
             ],
             "description": "The Illuminate Support package.",
             "homepage": "https://laravel.com",
-            "time": "2019-02-27T14:00:44+00:00"
+            "time": "2019-03-12T13:17:00+00:00"
         },
         {
             "name": "laravel/socialite",
-            "version": "v4.1.0",
+            "version": "v4.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/socialite.git",
-                "reference": "7581c57a60742f423a68362c79d507028f989bd7"
+                "reference": "0bb624e7e52c1858240c783a5418b8dcc5a7c2d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/socialite/zipball/7581c57a60742f423a68362c79d507028f989bd7",
-                "reference": "7581c57a60742f423a68362c79d507028f989bd7",
+                "url": "https://api.github.com/repos/laravel/socialite/zipball/0bb624e7e52c1858240c783a5418b8dcc5a7c2d1",
+                "reference": "0bb624e7e52c1858240c783a5418b8dcc5a7c2d1",
                 "shasum": ""
             },
             "require": {
@@ -628,7 +628,7 @@
                 "laravel",
                 "oauth"
             ],
-            "time": "2019-02-14T16:57:39+00:00"
+            "time": "2019-03-15T12:39:01+00:00"
         },
         {
             "name": "league/oauth1-client",
@@ -695,16 +695,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.14.2",
+            "version": "2.16.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "a1f4f9abcde8241ce33bf5090896e9c16d0b4232"
+                "reference": "dd16fedc022180ea4292a03aabe95e9895677911"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/a1f4f9abcde8241ce33bf5090896e9c16d0b4232",
-                "reference": "a1f4f9abcde8241ce33bf5090896e9c16d0b4232",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/dd16fedc022180ea4292a03aabe95e9895677911",
+                "reference": "dd16fedc022180ea4292a03aabe95e9895677911",
                 "shasum": ""
             },
             "require": {
@@ -751,20 +751,20 @@
                 "datetime",
                 "time"
             ],
-            "time": "2019-02-28T09:07:12+00:00"
+            "time": "2019-03-12T09:31:40+00:00"
         },
         {
             "name": "owenconti/remoteauth-php-sdk",
-            "version": "5.1.1",
+            "version": "5.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/owenconti/remoteauth-php-sdk.git",
-                "reference": "1476490f9a308707b161d2206b8360238318485f"
+                "reference": "920069da8863b74c56a5ac28c1335ae6391b7aee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/owenconti/remoteauth-php-sdk/zipball/1476490f9a308707b161d2206b8360238318485f",
-                "reference": "1476490f9a308707b161d2206b8360238318485f",
+                "url": "https://api.github.com/repos/owenconti/remoteauth-php-sdk/zipball/920069da8863b74c56a5ac28c1335ae6391b7aee",
+                "reference": "920069da8863b74c56a5ac28c1335ae6391b7aee",
                 "shasum": ""
             },
             "require": {
@@ -789,7 +789,7 @@
                 }
             ],
             "description": "PHP SDK for RemoteAuth.",
-            "time": "2019-03-04T03:21:16+00:00"
+            "time": "2019-03-17T20:17:24+00:00"
         },
         {
             "name": "owenconti/remoteauth-socialite-provider",
