@@ -21,10 +21,10 @@ class RemoteAuthServiceProvider extends EventServiceProvider
             $config = $app['config'];
 
             return new Client([
-                'baseUrl' => $config['services']['remoteauth']['url'],
-                'clientId' => $config['services']['remoteauth']['client_id'],
+                'baseUrl'      => $config['services']['remoteauth']['url'],
+                'clientId'     => $config['services']['remoteauth']['client_id'],
                 'clientSecret' => $config['services']['remoteauth']['client_secret'],
-                'scope' => $config['services']['remoteauth']['scopes'],
+                'scope'        => $config['services']['remoteauth']['scopes'],
             ], Cache::getFacadeRoot()->store());
         });
     }

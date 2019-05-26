@@ -1,33 +1,33 @@
 {
-    "name": "owenconti/remoteauth-laravel-sdk",
-    "description": "Laravel SDK for RemoteAuth.",
-    "type": "library",
-    "require": {
-        "illuminate/contracts": "^5.8",
-        "illuminate/support": "^5.8",
-        "laravel/socialite": "^4.0",
-        "owenconti/remoteauth-php-sdk": "^5.1",
-        "owenconti/remoteauth-socialite-provider": "^1.0"
-    },
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Owen Conti",
-            "email": "owen@ohseemedia.com"
-        }
-    ],
-    "extra": {
-        "laravel": {
-            "providers": [
-                "RemoteAuth\\RemoteAuthServiceProvider"
-            ]
-        }
-    },
-    "autoload": {
-        "psr-4": {
-            "RemoteAuth\\": "src/"
-        }
-    },
-    "prefer-stable": true,
-    "minimum-stability": "dev"
+  "name": "owenconti/remoteauth-laravel-sdk",
+  "description": "Laravel SDK for RemoteAuth.",
+  "type": "library",
+  "require": {
+    "illuminate/contracts": "^5.8",
+    "illuminate/support": "^5.8",
+    "laravel/socialite": "^4.0",
+    "owenconti/remoteauth-php-sdk": "^6.0",
+    "owenconti/remoteauth-socialite-provider": "^1.0"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Owen Conti",
+      "email": "owen@ohseemedia.com"
+    }
+  ],
+  "extra": {
+    "laravel": {
+      "providers": [
+        "RemoteAuth\\RemoteAuthServiceProvider"
+      ]
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "RemoteAuth\\": "src/"
+    }
+  },
+  "prefer-stable": true,
+  "minimum-stability": "dev"
 }

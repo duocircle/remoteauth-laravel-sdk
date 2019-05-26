@@ -23,16 +23,16 @@ class RemoteAuth
 
         Route::group([
             'middleware' => ['web'],
-            'namespace' => '\RemoteAuth\Http\Controllers'
+            'namespace'  => '\RemoteAuth\Http\Controllers'
         ], function ($router) {
             $router->get('/login/remoteauth', [
                 'uses' => 'AuthController@login',
-                'as' => 'remoteauth.auth.login',
+                'as'   => 'remoteauth.auth.login',
             ]);
 
             $router->get('/login/remoteauth/callback', [
                 'uses' => 'AuthController@callback',
-                'as' => 'remoteauth.auth.callback',
+                'as'   => 'remoteauth.auth.callback',
             ]);
         });
     }
