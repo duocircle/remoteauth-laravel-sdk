@@ -44,7 +44,7 @@ class AuthController
                 'name' => $userDetails->name
             ]);
             
-            $user->handleTokenRefresh($userDetails->id, $userDetails->token, $userDetails->refreshToken, $userDetails->expiresIn);
+            $user->handleTokenRefresh($userDetails->id, $userDetails->token, $userDetails->refreshToken, $userDetails->expiresIn, $userDetails->user);
 
             Auth::login($user);
 
